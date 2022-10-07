@@ -7,19 +7,64 @@ html>
             
         <h5>Ejemplo 02</h5>
         <div class="mermaid">
-          classDiagram
-    class BankAccount
-    BankAccount : +String id
-    BankAccount : +Bigdecimal balance
-    BankAccount : +deposit(amount)
-    BankAccount : +withdrawal(amount)
+          <h5> 
+               <br>UNIVERSIDAD NACIONAL DE LOJA 
+            
+               <br>FACULTAD DE LA ENERGÍA, INDUSTRIAS 
+                  Y RECURSOS NATURALES NO RENOVABLES.
 
-    class Persona
-    Persona : +String name
-    Persona : +int miEdad
-    
-    Persona "1" --> "*" BankAccount
+              <br> MAESTRÍA EN INGENIERÍA DE SOFTWARE
 
+              <br> DESARROLLO DE SOFTWARE DIRIGIDO POR MODELOS
+           
+                        <br>TAREA N° 1
+
+                 <br>DANIEL EMILIO LEÓN ORTEGA
+
+                        <br>DOCENTE:
+                 <br>ING. RENÉ ELIZALDE. MGS
+
+                     <br> LOJA - ECUADOR
+
+                          <br>2022
+
+        </h5>
+        <div class="mermaid">
+            classDiagram
+            direction LR
+                class Equipo{
+                    +String nombre
+                    +String tipoDeporte
+                    +String siglas
+                    +setNombre(nombre)
+                    +setTipoDeporte(tipoDeporte)
+                    +setSiglas(Siglas)
+                    +setListaJugdores(Jugador)
+                    +getNombre():nombre
+                    +getTipoDeporte():tipoDeporte
+                    +getSiglas():siglas
+                    +getListaJugadores():Jugador
+                }
+                class Jugador{
+                    +String nombre
+                    +String apellido
+                    +setNombre(nombre)
+                    +setApellido(apellido)
+                    +setTipoSancion(Sancion)
+                    +getNombre():nombre
+                    +getApellido():apellido
+                    +getTipoSancion():Sancion
+                }
+                class Sancion{
+                    +String observacion
+                    +String multa
+                    +setObservacion(observacion)
+                    +setMulta(multa)
+                    +getObservacion():observacion
+                    +getMulta():mukta
+                }
+            Equipo "1" -- "0..*" Jugador: tiene
+            Jugador "1" -- "0..*" Sancion: tiene
         </div>
     </body>
 </html>
